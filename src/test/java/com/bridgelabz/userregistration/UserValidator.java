@@ -28,4 +28,16 @@ public class UserValidator {
         String result=UserRegistration.checkUserName("desuza");
         Assert.assertEquals("false",result);
     }
+
+    @Test
+    public void givenEmailId_WhenProper_ShouldReturnTrue() {
+        String result=UserRegistration.checkUserEmail("abc.xyz@bl.co.in");
+        Assert.assertEquals("true",result);
+    }
+
+    @Test
+    public void givenEmailId_WhenProper_ShouldReturnFalse() {
+        String result=UserRegistration.checkUserEmail(".abc@abc.com");
+        Assert.assertEquals("false",result);
+    }
 }
