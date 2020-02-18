@@ -9,7 +9,7 @@ public class UserRegistration {
     public static String VALID_PASSWORD_PATTERN1="^[\\w\\W]{8,30}$";
     public static String VALID_PASSWORD_PATTERN2 = "^(?=.*[A-Z]).{8,}$";
     public static String VALID_PASSWORD_PATTERN3 = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[\\w\\W]).{8,}$";
-    public static String VALID_PASSWORD_PATTERN4 = "^((?=[^\\W\\_]*[\\W\\_][^\\W\\_]*$)(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9\\W\\_]{8,})$";
+    public static String VALID_PASSWORD_PATTERN4 = "^((?=[^\\W\\_]*[\\W\\_][^\\W\\_]*$)(?=.*[A-Z])(?=.*[\\d])[\\w\\W\\_]{8,})$";
 
     public static boolean checkUserName(String name) {
         return(name.matches(VALID_NAME_PATTERN));
