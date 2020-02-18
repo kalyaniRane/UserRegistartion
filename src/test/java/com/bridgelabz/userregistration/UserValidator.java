@@ -76,4 +76,16 @@ public class UserValidator {
         boolean result=UserRegistration.checkUserPassword("abcf@123",UserRegistration.VALID_PASSWORD_PATTERN2);
         Assert.assertFalse(result);
     }
+
+    @Test
+    public void givenPassword_WhenAtLeast1NumericNumber_ShouldReturnTrue() {
+        boolean result=UserRegistration.checkUserPassword("Anbc@123",UserRegistration.VALID_PASSWORD_PATTERN3);
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPassword_WhenAtLeast1NumericNumber_ShouldReturnFalse() {
+        boolean result=UserRegistration.checkUserPassword("abcf@abv",UserRegistration.VALID_PASSWORD_PATTERN3);
+        Assert.assertFalse(result);
+    }
 }
